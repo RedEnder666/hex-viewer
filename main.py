@@ -22,7 +22,7 @@ def conv(n, ri, ro):
         acc = acc // ro
     return res    
     
-FILENAME = input()
+FILENAME = input('Enter filename: ')
 f = [conv(str(i), 10, FORMAT) for i in open(FILENAME, 'rb').read()]
 print('          ', end='')
 print(*[f"{conv(str(i), 10, 16).rjust(2, '0')}" for i in range(FORMAT)])
